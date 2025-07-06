@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+    <name>com_kwpanorama</name>
+    <creationDate>2025-02-17</creationDate>
+    <copyright>Copyright (C) 2025. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>KWProductions Co.</author>
+    <authorEmail>webarchitect@kwproductions121.ir</authorEmail>
+    <authorUrl>https://kwproductions121.ir</authorUrl>
+    <version>1.0.0</version>
+    <description>A gallery with 3d-images </description>
+    <namespace path="src">Joomla\Component\Kwpanorama</namespace>
+
+    <!-- Runs on install -->
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    
+    <!-- Runs on uninstall -->
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+<updateservers>
+		<server type="collection" name="com_kwpanorama"><![CDATA[https://www.extensions.kwproductions121.ir/myextensions.xml]]></server>
+</updateservers>
+
+    <files folder="site">
+        <folder>assets</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+	<media folder="media" destination="com_kwpanorama">
+		
+		<folder>images</folder>
+		
+	</media>
+    <languages folder="site">
+        <language tag="en-GB">language/en-GB/en-GB.com_kwpanorama.ini</language>
+	    <language tag="en-GB">language/en-GB/en-GB.com_kwpanorama.sys.ini</language>
+
+    </languages>
+    <administration>
+        <menu>COM_KWPANORAMA</menu>
+        <submenu>
+            <menu link="option=com_kwpanorama&amp;view=kwpanoramas" view="kwpanoramas" img="components/com_kwpanorama/assets/images/logo.png" alt="Kwpanorama/Kwpanoramas">COM_KWPANORAMA_TITLE_KWPANORAMAS</menu>
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <folder>assets</folder>
+            <folder>tmpl</folder>
+            <folder>forms</folder>
+            <folder>services</folder>
+            <folder>sql</folder>
+            <folder>src</folder>
+        </files>
+        <languages folder="administrator">
+            <language tag="en-GB">language/en-GB/com_kwpanorama.ini</language>
+			<language tag="en-GB">language/en-GB/com_kwpanorama.sys.ini</language>
+        </languages>
+    </administration>
+    <!-- Generated with the ComponentGenerator.com -->
+</extension>

@@ -1,0 +1,6 @@
+	if(myclass=='')
+						$('<div id=surfacecontainer></div>').css({ position:'absolute', left:0, top:0, display:'block', width:config.width+'px', height:config.height+'px',  /* transformStyle:'preserve-3d', webkitTransformStyle:'preserve-3d', mozTransformStyle:'preserve-3d', oTransformStyle:'preserve-3d'*/}).appendTo('.borggique');
+				else
+						$('<div id=surfacecontainer></div>').css({ position:'absolute', left:0, top:0, display:'block', width:config.width+'px', height:config.height+'px',  /* transformStyle:'preserve-3d', webkitTransformStyle:'preserve-3d', mozTransformStyle:'preserve-3d', oTransformStyle:'preserve-3d'*/}).appendTo('.'+myclass);
+
+				
